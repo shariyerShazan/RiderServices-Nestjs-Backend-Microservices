@@ -1,24 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "apps/Rider-Services/src",
+  "sourceRoot": "apps/main-services/src",
   "compilerOptions": {
     "deleteOutDir": true,
     "webpack": true,
-    "tsConfigPath": "apps/Rider-Services/tsconfig.app.json"
+    "tsConfigPath": "apps/main-services/tsconfig.app.json"
   },
   "monorepo": true,
-  "root": "apps/Rider-Services",
+  "root": "apps/main-services",
   "projects": {
-    "Rider-Services": {
-      "type": "application",
-      "root": "apps/Rider-Services",
-      "entryFile": "main",
-      "sourceRoot": "apps/Rider-Services/src",
-      "compilerOptions": {
-        "tsConfigPath": "apps/Rider-Services/tsconfig.app.json"
-      }
-    },
     "loggin-services": {
       "type": "application",
       "root": "apps/loggin-services",
@@ -26,6 +17,24 @@
       "sourceRoot": "apps/loggin-services/src",
       "compilerOptions": {
         "tsConfigPath": "apps/loggin-services/tsconfig.app.json"
+      }
+    },
+    "main-services": {
+      "type": "application",
+      "root": "apps/main-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/main-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/main-services/tsconfig.app.json"
+      }
+    },
+    "rider-services": {
+      "type": "application",
+      "root": "apps/rider-services",
+      "entryFile": "main",
+      "sourceRoot": "apps/rider-services/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rider-services/tsconfig.app.json"
       }
     }
   }
